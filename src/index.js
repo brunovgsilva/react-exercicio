@@ -5,11 +5,14 @@ import { combineReducers, createStore } from 'redux'
 import { Provider } from 'react-redux'
 
 import counterReducer from './utils/counterReducer'
+import userReducer from './utils/userReducer'
 
-import Counter from './componentes/Counter'
+import { userView as UserView, userViewNovo as UserViewNovo } from './componentes/UserView'
+import UserAction from './componentes/UserAction'
 
 const reducers = combineReducers({
-    counter: counterReducer
+    counter: counterReducer,
+    users: userReducer
 })
 
 const elements = document.getElementById('root')
@@ -17,7 +20,9 @@ const elements = document.getElementById('root')
 
 ReactDom.render(
     <Provider store={createStore(reducers)}>
-        <Counter />
+        <UserView />
+        <UserViewNovo />
+        <UserAction />
     </Provider>
     // <div>
 

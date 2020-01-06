@@ -5,9 +5,15 @@ export default props => {
     const [parImpar, setParOuImpar] = useState('Par')
 
     useEffect(() => {
+        debugger
         contador % 2 === 0 ? setParOuImpar('Par') :
             setParOuImpar('Impar')
-    })
+    }, [contador])
+
+    useEffect(() => {
+        debugger
+    }, [parImpar])
+
 
     return (
         <div>
