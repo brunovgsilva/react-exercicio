@@ -10,6 +10,8 @@ import userReducer from './utils/userReducer'
 import { userView as UserView, userViewNovo as UserViewNovo } from './componentes/UserView'
 import UserAction from './componentes/UserAction'
 
+import { Pai1, Pai2 } from './componentes/Pai'
+
 const reducers = combineReducers({
     counter: counterReducer,
     users: userReducer
@@ -20,9 +22,7 @@ const elements = document.getElementById('root')
 
 ReactDom.render(
     <Provider store={createStore(reducers)}>
-        <UserView />
-        <UserViewNovo />
-        <UserAction />
+        <Pai2 />
     </Provider>
     // <div>
 
